@@ -15,6 +15,9 @@
     height: 100%;
 }
 
+#indepth_page1{
+	background-color: #141414;
+}
 
 .indepth_share{
 		display: none;
@@ -180,7 +183,7 @@
 	background: url(../images/1431466310.jpg);
 	background-size: 1920px auto ;
 	background-position: center top;
-	background-attachment: fixed;	
+	//background-attachment: fixed;	
 	background-repeat: no-repeat;
 }
 
