@@ -183,7 +183,6 @@
 	background: url(../images/1431466310.jpg);
 	background-size: 1920px auto ;
 	background-position: center top;
-	//background-attachment: fixed;	
 	background-repeat: no-repeat;
 }
 
@@ -311,7 +310,13 @@
 	.indepth_iframe{
 	   padding-bottom: 55.25%;
 	}
-
+	
+	#indepth_cover .indepth_parallax_back{
+		background: url(../images/1431473774.jpg);
+		background-size: cover;
+		background-position: center center;
+		
+	}
 
 	
 	.indepth_pages{
@@ -336,10 +341,7 @@
 		width: 100%;
 	}
 	
-	#indepth_cover .indepth_parallax_back{
-		background-size: auto 800px;
-		background-position: 50% 0;
-	}
+
 	
 		
 
@@ -407,7 +409,7 @@
 	}
 	
 	#indepth_cover{
-		height: 540px;	
+		height: 380px;	
 	}
 	
 	.indepth_menu_item{
@@ -418,12 +420,7 @@
 		
 	}
 	
-	#indepth_cover .indepth_parallax_back{
-		background: url(../images/movil/JC_1_Portada.jpg);
-		background-size: 100% auto;
-		background-position: center center;
-		background-attachment: inherit;	
-	}
+
 
 }
 	
@@ -432,12 +429,22 @@
 	.indepth_iframe{
 	   padding-bottom: 80.25%;
 	}
+	
+	#indepth_cover{
+		height: 340px;	
+	}
+	
 }
 	
 @media screen and (max-width: 320px) {
 	.indepth_iframe{
 	   padding-bottom: 90.25%;
 	}
+	
+	#indepth_cover{
+		height: 300px;	
+	}
+	
 }
 
 
