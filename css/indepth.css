@@ -15,12 +15,7 @@
     height: 100%;
 }
 
-#indepth_page1{
-}
 
-#indepth_cover{
-	display: none;
-}
 .indepth_share{
 		display: none;
 		position: fixed;
@@ -175,17 +170,18 @@
 }
 
 #indepth_cover{
-	height: 757px;
+	height: 656px;
 	background: #141414;
 }
 
 
  
 #indepth_cover .indepth_parallax_back{
-	background: url(../images/JC_1_Portada.jpg);
-	background-size: auto 100%;
-	background-position: center center;
+	background: url(../images/1431466310.jpg);
+	background-size: 1920px auto ;
+	background-position: center top;
 	background-attachment: fixed;	
+	background-repeat: no-repeat;
 }
 
 

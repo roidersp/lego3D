@@ -10,29 +10,6 @@ var numeroImages2=8;
  var intervalID2;
 var posicion_slider2=0;
 
-$(document).on("click", "#indepth_button_ver" ,function(){
-		var position = $(".indepth_content_top").position();
-		$('html, body').animate({
-			scrollTop: position.top
-		}, 2000);
-	});
-	
-	
-	$(document).on("click",".indepth_menu_item",function(){
-		 var num_menu=$(this).attr("num");
-		 var position = $("#indepth_page"+num_menu).position();
-		 
-		 if(detect_mobile()){
-			 f_top=position.top+60;
-		 }else{
-			 f_top=position.top+60;
-		 }
-		$('html, body').animate({
-			scrollTop: f_top
-		}, 000);
-		$(".indepth_menu_item").removeClass("active");
-		 $("#indepth_menu_"+num_menu).addClass("active");	
-	 });
 
 var indepth_sizeAdjust = function(firstTime){
 	$(".indepth_page").each(function(){
@@ -45,76 +22,6 @@ var indepth_sizeAdjust = function(firstTime){
 		}
 	})
 }
-
-
-
-var indepth_menu=function(){
-	$('.indepth_cover').waypoint(function(direction) {
-		$("#indepth_menu").fadeOut();
-		$(".indepth_share").fadeOut();
-	});
-	
-	 $('#indepth_page1').waypoint(function(direction) {
-		 if(direction=='down'){
-			 $("#indepth_menu").fadeIn("slow");
-			 $(".indepth_share").fadeIn("slow");
-		 }else{
-			  $("#indepth_menu").fadeOut();
-			   $(".indepth_share").fadeOut();
-		 }
-		 
-		 $("#indepth_menu").show();
-		  $(".indepth_share").show();
-		 $(".indepth_menu").removeClass("active");
-		 var num_menu=$(this).attr("num");
-		 $("#indepth_menu_0").addClass("active");
-		 
-		
-	});
-	
-	 $('#indepth_footer').waypoint(function(direction) {
-		 if(direction=='down'){
-			 $("#indepth_menu").fadeOut();
-			 $(".indepth_share").fadeOut("slow");
-		 }else{
-			  $("#indepth_menu").fadeIn("slow");
-			  $(".indepth_share").fadeIn("slow");
-		 }
-		 
-		
-	},{offset: 'bottom-in-view'});
-	
-	
-	
-	
-	$(".indepth_page_content").waypoint(function(direction){
-		 $("#indepth_menu").show();
-		 $(".indepth_share").show();
-		 $(".indepth_menu_item").removeClass("active");
-		 var num_menu=$(this).attr("num");
-		 $("#indepth_menu_"+num_menu).addClass("active");		 
-	},{offset: '70px'});
-	
-	$(".indepth_page_content").waypoint(function(direction){
-		 $("#indepth_menu").show();
-		 $(".indepth_share").show();
-		 $(".indepth_menu_item").removeClass("active");
-		 var num_menu=$(this).attr("num");
-		 $("#indepth_menu_"+num_menu).addClass("active");
-		 
-	},{offset: 'bottom-in-view'});
-	
-	$("#indepth_page_content").waypoint(function(direction){
-		$(".indepth_menu_item").removeClass("active");
-		 $("#indepth_menu_0").addClass("active");
-	},{offset: 'bottom-in-view'});
-	
-	 $("#indepth_menu").hide();
-	 
-	 
-
-}
-
 
 
 var indepth_preloadImgs = function(){
@@ -216,19 +123,15 @@ if (window.DISQUS) {
 $(document).ready(function(){
 	indepth_sizeAdjust(true);
 	indepth_preloadImgs();
-	 indepth_menu();
 	var ventana_alto = $(window).height();
 	//$("#indepth_break_2").css("height",)
 	if(navigator.platform == 'iPad' || navigator.platform == 'iPhone' || navigator.platform == 'iPod' || navigator.platform == 'Android')
     {   	
     
-			 $('#indepth_cover_view').css("position","absolute");
     }else{
-    	$('#indepth_cover').css("height",(ventana_alto)+"px");
     	 if(ventana_alto>600){
 
 
-	 	$('#indepth_cover .indepth_cover_back_body').css("top",ventana_alto*.30);
  	}
 	 //ventana_alto=ventana_alto-(ventana_alto*.15)
 	 	//$('.indepth_anuncio_section').css("height",ventana_alto-(ventana_alto*.10)+"px");
@@ -240,15 +143,12 @@ $(document).ready(function(){
 	    console.log("ipad")
     }
 		loadDisqus($("#indepth_coments"),disqus_url, "http://juanfutbol.com/indepth/"+disqus_url);
-		$('#indepth_cover').css("height",(ventana_alto-60)+"px");
 });
 
 $(window).on("resize", function(){
 	indepth_sizeAdjust(false);
 	var ventana_alto = $(window).height();
-    	$('#indepth_cover').css("height",(ventana_alto-60)+"px");
     	 if(ventana_alto>600){
-	 	$('#indepth_cover .indepth_cover_back_body').css("top",ventana_alto*.30);
  	}
 	 if(navigator.platform == 'iPad'){
 	    //$("#indepth_parallax_back").css("background-size", "100%");
