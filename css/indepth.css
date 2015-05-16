@@ -1,10 +1,9 @@
 .indepth_iframe{
 	width: 100%;
 	max-width: 640px;
-	margin: 60px auto;
+	margin: 20px auto;
 	position: relative;
    padding-bottom: 30.25%;
-   overflow: hidden;
 }
 
 .indepth_iframe iframe{
@@ -16,11 +15,11 @@
 }
 
 #indepth_page1{
-	background-color: #000;
+	background-color: #e6e6e6;
+	padding: 60px 0px;
 }
 
 .indepth_share{
-		display: none;
 		position: fixed;
 		right: 3px;
 		bottom: 8px;
@@ -28,11 +27,90 @@
 		
 	}
 	
+	.indepth_partido{
+		text-align: center;
+		margin: 40px auto;
+		padding-bottom: 30px;
+	}
+
+  .indepth_iframe:before {
+	  content: "";
+	  width: 450px;
+	  position: absolute;
+	  top: -80px;
+	  background-repeat: no-repeat;
+	  z-index: 100;
+	  background-size: 100%;
+	  left: -350px;
+	  height: 170%;
+}
+
+.indepth_iframe:after {
+	  content: "";
+	  width: 450px;
+	  position: absolute;
+	  top: -80px;
+	  background-repeat: no-repeat;
+	  z-index: 100;
+	  background-size: 100%;
+	  right: -350px;
+	  height: 170%;
+}
+
+
+.lego_title{
+	padding: 6px 50px;
+	border-bottom: 2px solid #eebe31;
+	color: #f5040d;
+	display: table;
+	font-family: 'Roboto';
+	font-size: 46px;
+	text-align: center;
+	margin: auto;
+	margin-bottom: 20px;
+	text-transform: uppercase;
+	
+}
+
+#indepth_ame_pac .indepth_iframe:before {
+	  	background-image: url(../images/Matosas.png);
+	  }
+	  
+	  #indepth_ame_pac .indepth_iframe:after {
+	  	background-image: url(../images/Diego.png);
+	  }
+	  
+	  #indepth_tig_san .indepth_iframe:before {
+	  	background-image: url(../images/Tuca.png);
+	  }
+	  
+	  #indepth_tig_san .indepth_iframe:after {
+	  	background-image: url(../images/Caixi.png);
+	  }
+	  
+	  #indepth_chi_atl .indepth_iframe:before {
+	  	background-image: url(../images/TomasBoy.png);
+	  }
+	  
+	  #indepth_chi_atl .indepth_iframe:after {
+	  	background-image: url(../images/Chepo.png);
+	  }
+	  
+	  #indepth_ver_que .indepth_iframe:before {
+	  	background-image: url(../images/Reinoso.png);
+	  }
+	  
+	  #indepth_ver_que .indepth_iframe:after {
+	  	background-image: url(../images/Vuce.png);
+	  }
+	  
+	  
+	
 	.indepth_share_item{
 		width: 40px;
 		height: 40px;
 		border-radius: 50%;
-		background-color: rgba(255, 255, 255, 0.4);
+		background-color: rgba(0, 0, 0, 0.4);
 		float: left;
 		background-repeat: no-repeat;
 		background-position: center center;
@@ -304,6 +382,31 @@
 	.indepth_iframe{
 	   padding-bottom: 40.25%;
 	}
+	
+	  .indepth_iframe:before {
+	  content: "";
+	  width: 400px;
+	  position: absolute;
+	  top: -80px;
+	  background-repeat: no-repeat;
+	  z-index: 100;
+	  background-size: 100%;
+	  left: -300px;
+	  height: 170%;
+}
+
+.indepth_iframe:after {
+	  content: "";
+	  width: 400px;
+	  position: absolute;
+	  top: -80px;
+	  background-repeat: no-repeat;
+	  z-index: 100;
+	  background-size: 100%;
+	  right: -300px;
+	  height: 170%;
+}
+	
 }
 
 @media screen and (max-width: 800px) {
@@ -318,6 +421,13 @@
 		
 	}
 
+	  .indepth_iframe:before {
+	  display: none;
+}
+
+.indepth_iframe:after {
+	  display: none;
+}
 	
 	.indepth_pages{
 		width: 100%;
